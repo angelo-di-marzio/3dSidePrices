@@ -1,0 +1,50 @@
+:root {
+  --white: #ffffff;
+  --black: #181818;
+  --green: #45b64b;
+  --light-green:#2a9c323b;
+  --dark-green:#1b662cee; 
+  --text-light: rgba(60, 60, 60, 0.66);
+  --text-dark: rgba(235, 235, 235, 0.64);
+}
+
+/* Set light or dark theme */
+:root {
+  --color-background: var(--white);
+  --color-hover: var(--light-green);
+  --color-divide: var(--dark-green);
+  --color-text: var(--text-light);
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--black);
+    --color-divide: var(--dark-green);
+    --color-hover: var(--light-green);
+    --color-text: var(--text-dark);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
